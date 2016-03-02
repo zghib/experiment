@@ -1,0 +1,32 @@
+@startuml
+
+note top of (AbstractExpression)
+The interpreter pattern is a design pattern that specifies how to evaluate sentences in
+a language. The basic idea is to have a class for each symbol (terminal or nonterminal)
+in a specialized computer language. The syntax tree of a sentence in the language is an
+instance of the composite pattern and is used to evaluate (interpret) the sentence for a client
+end note
+
+class Context{
+
+}
+
+note right of AbstractExpression
+end note
+
+class AbstractExpression{
+Interpret(Context)
+}
+
+class TerminalExpression{
+Interpret(Context)
+}
+
+class NonTerminalExpression{
+Interpret(Context)
+}
+
+AbstractExpression <|-- TerminalExpression
+AbstractExpression <|-- NonTerminalExpression
+
+@enduml

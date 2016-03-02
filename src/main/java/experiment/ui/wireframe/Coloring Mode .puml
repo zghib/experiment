@@ -1,0 +1,16 @@
+@startuml
+salt
+{
+  Coloring Mode
+  ---
+  () Material Type
+  () Quality
+  {(X) Time Period | ^Selected TPP^}
+
+  {# Nr| Period | Color
+  1|01.03 -07.03| Green
+  1|08.03 -14.03 |  Red
+  1|15.03 -21.03 |  Blue
+     }
+}
+@enduml

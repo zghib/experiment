@@ -1,0 +1,24 @@
+@startuml
+salt
+{
+Time Period Profile
+    Name: | "MyName"
+    Start Date: | "01.03.2016"
+               .|(if empty use ScenarioStartDate)
+ ---
+ --
+     Repeat Period
+     Repeat Days |   "6"
+     Maximum Repeats  | "4"
+ --
+ Periods table
+ {#
+     Period 1| (01.03 - 07.03)| color chooser
+     Period 2| (08.03 - 14.03)| color chooser
+     Period 3| (15.03 - 21.03)| color chooser
+     Period 4| (22.03 - 28.03)| color chooser
+     }
+--
+  [Ok]|[Cancel]
+}
+@enduml

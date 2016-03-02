@@ -1,0 +1,30 @@
+@startuml
+
+abstract class factory.shape.Shape{
+  void draw()
+}
+
+factory.shape.Shape <|-- factory.shape.Circle
+factory.shape.Shape <|-- factory.shape.Square
+factory.shape.Shape <|-- factory.shape.Rectangle
+ShapeFactory -> factory.shape : creates
+
+abstract class factory.color.Color{
+  Color getColor()
+}
+
+factory.color.Color <|-- factory.color.Red
+factory.color.Color <|-- factory.color.Green
+factory.color.Color <|-- factory.color.blue
+ColorFactory -> factory.color : creates
+
+AbstractFactory <|-- ShapeFactory
+AbstractFactory <|-- ColorFactory
+
+FactoryProducer -> AbstractFactory : asks
+class FactoryProducer{
+  AbstractFactory getFactory()
+}
+
+Client -> FactoryProducer : use
+@enduml

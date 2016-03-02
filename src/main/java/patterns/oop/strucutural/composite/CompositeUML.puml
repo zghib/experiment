@@ -1,0 +1,45 @@
+@startuml
+
+class Component{
+ +operation()
+}
+
+class Leaf{
+ +operation()
+}
+
+class Composite{
+ +operation()
+ +addComponent()
+ +removeComponent()
+ +getChild()
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+Composite "1" o-- "0..*" Component : children
+note top of (Component)
+The composite pattern describes that a group of objects is to be treated in the same way
+as a single instance of an object. The intent of a composite is to "compose" objects into
+tree structures to represent part-whole hierarchies. Implementing the composite pattern
+lets clients treat individual objects and compositions uniformly
+end note
+
+note right of (Component)
+     Component
+     is the abstraction for all components, including composite ones
+     declares the interface for objects in the composition
+     (optional) defines an interface for accessing a component's parent in the recursive structure, and implements it if that's appropriate
+
+     Leaf
+     represents leaf objects in the composition
+     implements all Component methods
+
+     Composite
+     represents a composite Component (component having children)
+     implements methods to manipulate children
+     implements all Component methods, generally by delegating them to its children
+end note
+
+
+@enduml

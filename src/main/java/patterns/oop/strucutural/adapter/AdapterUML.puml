@@ -1,0 +1,34 @@
+@startuml
+
+
+class Client{
+Adaptor adaptor
+doWork()
+}
+note bottom: doWork() - adaptor.methodA()
+
+
+class Adaptor{
+methodA()
+}
+note bottom of Adaptor
+  method1()
+    . . .
+  methodN()
+end note
+
+
+class Adaptee1{
+method1()
+}
+
+class AdapteeN{
+methodN()
+}
+
+Adaptor -up-> Adaptee1
+Adaptor -up-> AdapteeN
+Client -> Adaptor
+
+
+@enduml

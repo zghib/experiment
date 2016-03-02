@@ -1,0 +1,31 @@
+@startuml
+
+abstract class factory.Plan{
+  Double rate
+  void getRate()
+  void calculateBill(int units)
+}
+
+factory.Plan <|-- factory.DomesticPlan
+factory.Plan <|-- factory.CommercialPlan
+factory.Plan <|-- factory.InstitutionalPlan
+
+class factory.DomesticPlan{
+void getRate()
+}
+
+class factory.CommercialPlan{
+void getRate()
+}
+
+class factory.InstitutionalPlan{
+void getRate()
+}
+
+class GenerateBill{
+}
+
+Client -> GetPlanFactory : asks
+GetPlanFactory -> factory : creates
+
+@enduml
