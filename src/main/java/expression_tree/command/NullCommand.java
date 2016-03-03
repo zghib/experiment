@@ -1,5 +1,6 @@
 package expression_tree.command;
 
+import expression_tree.Platform;
 import expression_tree.state.TreeOps;
 
 /**
@@ -14,7 +15,7 @@ public class NullCommand
      * Constructor that provides the appropriate @a * TreeOps and the
      * requested format.
      */
-    NullCommand(TreeOps context) {
+    public NullCommand(TreeOps context) {
         super.treeOps = context;
     }
 
@@ -25,31 +26,31 @@ public class NullCommand
 
     /** Print the valid commands available to users. */
     public void printValidCommands(boolean verboseField) {
-//  TODO:      Platform platform = Platform.instance();
-//    	platform.disableAll(verboseField);
-//        platform.outputMenu("",
-//                            "",
-//                            "");
-//        platform.outputMenu("1a.",
-//                            "format",
-//                            "[post-order]");
-//        platform.outputMenu("1b.",
-//                            "set",
-//                            "[variable=value]");
-//        platform.outputMenu("2.",
-//                            "expr",
-//                            "[expression]");
-//        platform.outputMenu("3a.",
-//                            "eval",
-//                            "[post-order]");
-//        platform.outputMenu("3b.",
-//                            "print",
-//                            "[in-order | pre-order | post-order| level-order]");
-//        platform.outputMenu("0c.",
-//                            "quit",
-//                            "");
-//        platform.outputMenu("",
-//                            "",
-//                            "");
+        Platform platform = Platform.instance();
+    	platform.disableAll(verboseField);
+        platform.outputMenu("",
+                            "",
+                            "");
+        platform.outputMenu("1a.",
+                            "format",
+                            "[post-order]");
+        platform.outputMenu("1b.",
+                            "set",
+                            "[variable=value]");
+        platform.outputMenu("2.",
+                            "expr",
+                            "[expression]");
+        platform.outputMenu("3a.",
+                            "eval",
+                            "[post-order]");
+        platform.outputMenu("3b.",
+                            "print",
+                            "[in-order | pre-order | post-order| level-order]");
+        platform.outputMenu("0c.",
+                            "quit",
+                            "");
+        platform.outputMenu("",
+                            "",
+                            "");
     }
 }

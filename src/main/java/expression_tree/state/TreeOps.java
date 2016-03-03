@@ -1,6 +1,6 @@
 package expression_tree.state;
 
-import expression_tree.ExpressionTree;
+import expression_tree.composite.ExpressionTree;
 import expression_tree.interpreter.Interpreter;
 
 /**

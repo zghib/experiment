@@ -18,8 +18,8 @@ public abstract class UserCommand {
     protected TreeOps treeOps;
 	
     /** Runs the command. */
-    abstract void execute() throws Exception;
+    public abstract void execute() throws Exception;
 
     /** Print the valid commands available to users. */
-    abstract void printValidCommands(boolean verboseField);
+    public abstract void printValidCommands(boolean verboseField);
 }

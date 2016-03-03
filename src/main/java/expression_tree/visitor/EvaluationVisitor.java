@@ -2,6 +2,7 @@ package expression_tree.visitor;
 
 import java.util.Stack;
 
+import expression_tree.Platform;
 import expression_tree.node.AddNode;
 import expression_tree.node.DivideNode;
 import expression_tree.node.LeafNode;
@@ -68,9 +69,9 @@ public class EvaluationVisitor implements Visitor {
                 int rhs = stack.pop();
                 stack.push(stack.pop() / rhs);
             } else {
-//              TODO:  Platform platform = Platform.instance();
-//                platform.errorLog("EvaluationVisitor", "\n\n**: Division by zero is not allowed. ");
-//                platform.errorLog("EvaluationVisitor", "Resetting evaluation visitor.\n\n");
+              Platform platform = Platform.instance();
+                platform.errorLog("EvaluationVisitor", "\n\n**: Division by zero is not allowed. ");
+                platform.errorLog("EvaluationVisitor", "Resetting evaluation visitor.\n\n");
                 reset();
             }
         }

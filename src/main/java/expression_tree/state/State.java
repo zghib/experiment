@@ -1,9 +1,9 @@
 package expression_tree.state;
 
-import java.util.HashMap;
 import java.util.Iterator;
 
-import expression_tree.ExpressionTree;
+import expression_tree.Platform;
+import expression_tree.composite.ExpressionTree;
 import expression_tree.visitor.EvaluationVisitor;
 import expression_tree.visitor.Visitor;
 import expression_tree.visitor.VisitorFactory;
@@ -123,7 +123,7 @@ public class State {
         Integer total = ((EvaluationVisitor) evalVisitor).total();
 
         // Use the platform strategy to printout the result.
-        //TODO: Platform.instance().outputLine(total.toString());
+        Platform.instance().outputLine(total.toString());
     }
 
     /** 

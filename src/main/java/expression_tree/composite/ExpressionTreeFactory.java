@@ -1,4 +1,4 @@
-package expression_tree;
+package expression_tree.composite;
 
 import expression_tree.node.Node;
 

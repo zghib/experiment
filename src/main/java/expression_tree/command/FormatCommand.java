@@ -1,5 +1,6 @@
 package expression_tree.command;
 
+import expression_tree.Platform;
 import expression_tree.state.TreeOps;
 
 /**
@@ -30,27 +31,27 @@ public class FormatCommand
 
     /** Print the valid commands available to users. */
     public void printValidCommands(boolean verboseField) {
-//     TODO:   Platform platform = Platform.instance();
-//    	platform.disableAll(verboseField);
-//        platform.outputMenu("",
-//                            "",
-//                            "");
-//        platform.outputMenu("1.",
-//                            "expr",
-//                            "[expression]");
-//        platform.outputMenu("2a.",
-//                            "eval",
-//                            "[post-order]");
-//        platform.outputMenu("2b.",
-//                            "print", "[in-order | pre-order | post-order| level-order]");
-//        platform.outputMenu("0b.",
-//                            "set",
-//                            "[variable = value]");
-//        platform.outputMenu("0c.",
-//                            "quit",
-//                            "");
-//        platform.outputMenu("",
-//                            "",
-//                            "");
+       Platform platform = Platform.instance();
+    	platform.disableAll(verboseField);
+        platform.outputMenu("",
+                            "",
+                            "");
+        platform.outputMenu("1.",
+                            "expr",
+                            "[expression]");
+        platform.outputMenu("2a.",
+                            "eval",
+                            "[post-order]");
+        platform.outputMenu("2b.",
+                            "print", "[in-order | pre-order | post-order| level-order]");
+        platform.outputMenu("0b.",
+                            "set",
+                            "[variable = value]");
+        platform.outputMenu("0c.",
+                            "quit",
+                            "");
+        platform.outputMenu("",
+                            "",
+                            "");
     }
 }

@@ -1,5 +1,6 @@
 package expression_tree.command;
 
+import expression_tree.Platform;
 import expression_tree.state.TreeOps;
 
 /**
@@ -32,26 +33,26 @@ public class EvalCommand
 
     /** Creates a menu for the user. */
     public void printValidCommands(boolean verboseField) {
-//   TODO:     Platform platform = Platform.instance();
-//    	platform.disableAll(verboseField);
-//    	platform.outputMenu("", "", "");
-//        platform.outputMenu("1a.",
-//                            "eval",
-//                            "[post-order]");
-//        platform.outputMenu("1b.",
-//                            "print",
-//                            "[in-order | pre-order | post-order| level-order]");
-//        platform.outputMenu("0a.",
-//                            "format",
-//                            "[in-order]");
-//        platform.outputMenu("0b.",
-//                            "set",
-//                            "[variable = value]");
-//        platform.outputMenu("0c.",
-//                            "quit",
-//                            "");
-//        platform.outputMenu("",
-//                            "",
-//                            "");
+     Platform platform = Platform.instance();
+    	platform.disableAll(verboseField);
+    	platform.outputMenu("", "", "");
+        platform.outputMenu("1a.",
+                            "eval",
+                            "[post-order]");
+        platform.outputMenu("1b.",
+                            "print",
+                            "[in-order | pre-order | post-order| level-order]");
+        platform.outputMenu("0a.",
+                            "format",
+                            "[in-order]");
+        platform.outputMenu("0b.",
+                            "set",
+                            "[variable = value]");
+        platform.outputMenu("0c.",
+                            "quit",
+                            "");
+        platform.outputMenu("",
+                            "",
+                            "");
     }
 }

@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Stack;
 
-import expression_tree.ExpressionTree;
-import expression_tree.ExpressionTreeFactory;
+import expression_tree.Platform;
+import expression_tree.composite.ExpressionTree;
+import expression_tree.composite.ExpressionTreeFactory;
 import expression_tree.node.AddNode;
 import expression_tree.node.DivideNode;
 import expression_tree.node.LeafNode;
@@ -98,7 +99,7 @@ public class Interpreter {
         public void print() {
             for (Iterator<Entry<String, Integer>> it = map.entrySet().iterator(); it.hasNext();) {
                 Entry<String, Integer> x = it.next();
-                // TODO Platform.instance().outputLine((x.getKey() + " = " + x.getValue()));
+                Platform.instance().outputLine((x.getKey() + " = " + x.getValue()));
             }
         }
 

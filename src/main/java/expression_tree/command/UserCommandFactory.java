@@ -37,7 +37,7 @@ public class UserCommandFactory {
         new HashMap<String, IUserCommandFactoryCommand>();
 
     /** Ctor */
-    UserCommandFactory(final TreeOps treeOps) {   	
+    public UserCommandFactory(final TreeOps treeOps) {
     	/** Initialize the TreeOps member. */
         this.treeOps = treeOps;
    

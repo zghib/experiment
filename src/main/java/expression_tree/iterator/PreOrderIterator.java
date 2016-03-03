@@ -3,7 +3,7 @@ package expression_tree.iterator;
 import java.util.Iterator;
 import java.util.Stack;
 
-import expression_tree.ExpressionTree;
+import expression_tree.composite.ExpressionTree;
 
 /**
  * @class PreOrderIterator

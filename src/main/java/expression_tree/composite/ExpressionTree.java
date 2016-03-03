@@ -1,4 +1,4 @@
-package expression_tree;
+package expression_tree.composite;
 
 import java.util.Iterator;
 

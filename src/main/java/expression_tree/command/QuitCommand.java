@@ -1,5 +1,6 @@
 package expression_tree.command;
 
+import expression_tree.reactor.InputDispatcher;
 import expression_tree.state.TreeOps;
 
 /**
@@ -20,7 +21,7 @@ public class QuitCommand
 
     /** Quit the input dispatching loop. */
     public void execute() {
-        //TODO: InputDispatcher.instance().endInputDispatching();
+        InputDispatcher.instance().endInputDispatching();
     }
 
     /** Print the valid commands available to users. */

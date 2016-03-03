@@ -3,7 +3,7 @@ package expression_tree.iterator;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import expression_tree.ExpressionTree;
+import expression_tree.composite.ExpressionTree;
 
 /**
  *  IteratorFactory

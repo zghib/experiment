@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import expression_tree.ExpressionTree;
+import expression_tree.composite.ExpressionTree;
 
 /**
  * @class LevelOrderIterator

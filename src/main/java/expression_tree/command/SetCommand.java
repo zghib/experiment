@@ -1,5 +1,6 @@
 package expression_tree.command;
 
+import expression_tree.Platform;
 import expression_tree.state.TreeOps;
 
 /**
@@ -30,59 +31,59 @@ public class SetCommand
     }
 	
     public void printValidCommands(boolean verboseField) {
-//    TODO:    Platform platform = Platform.instance();
-//    	platform.disableAll(verboseField);
-//    	platform.outputLine("");
-//
-//        /**
-//         * If we've never had a format command called successfully,
-//         * then we have a different set of valid commands.
-//         */
-//        char abc[] = { 'a','b','c' };
-//        int step = 1;
-//        int substep = 0;
-//        String formatMessagePartOne="format";
-//        String formatMessagePartTwo="[in-order]";
-//
-//        platform.outputMenu("", "", "");
-//
-//        if(!treeOps.formatted()) {
-//            platform.outputMenu(step++ +".",
-//                                formatMessagePartOne,
-//                                formatMessagePartTwo);
-//            platform.outputMenu(step++ +".",
-//                                "expr",
-//                                "[expression]");
-//            platform.outputMenu(step+ "a.",
-//                                "eval",
-//                                "[post-order]");
-//            platform.outputMenu(step++ + "b.",
-//                                "print",
-//                                "[in-order | pre-order | post-order| level-order]");
-//            step = 0;
-//        }
-//
-//        if(treeOps.formatted())
-//            platform.outputMenu(step +".",
-//                                formatMessagePartOne,
-//                                formatMessagePartTwo);
-//
-//        platform.outputMenu(step + abc[substep++] + "",
-//                            "set",
-//                            "[variable=value]");
-//
-//        platform.outputMenu(step +".",
-//                            formatMessagePartOne,
-//                            formatMessagePartTwo);
-//        platform.outputMenu(step +".",
-//                            formatMessagePartOne,
-//                            formatMessagePartTwo);
-//
-//        platform.outputMenu(step + abc[substep++]+ ".",
-//                            "quit",
-//                            "");
-//        platform.outputMenu("",
-//                            "",
-//                            "");
+     Platform platform = Platform.instance();
+    	platform.disableAll(verboseField);
+    	platform.outputLine("");
+
+        /**
+         * If we've never had a format command called successfully,
+         * then we have a different set of valid commands.
+         */
+        char abc[] = { 'a','b','c' };
+        int step = 1;
+        int substep = 0;
+        String formatMessagePartOne="format";
+        String formatMessagePartTwo="[in-order]";
+
+        platform.outputMenu("", "", "");
+
+        if(!treeOps.formatted()) {
+            platform.outputMenu(step++ +".",
+                                formatMessagePartOne,
+                                formatMessagePartTwo);
+            platform.outputMenu(step++ +".",
+                                "expr",
+                                "[expression]");
+            platform.outputMenu(step+ "a.",
+                                "eval",
+                                "[post-order]");
+            platform.outputMenu(step++ + "b.",
+                                "print",
+                                "[in-order | pre-order | post-order| level-order]");
+            step = 0;
+        }
+
+        if(treeOps.formatted())
+            platform.outputMenu(step +".",
+                                formatMessagePartOne,
+                                formatMessagePartTwo);
+
+        platform.outputMenu(step + abc[substep++] + "",
+                            "set",
+                            "[variable=value]");
+
+        platform.outputMenu(step +".",
+                            formatMessagePartOne,
+                            formatMessagePartTwo);
+        platform.outputMenu(step +".",
+                            formatMessagePartOne,
+                            formatMessagePartTwo);
+
+        platform.outputMenu(step + abc[substep++]+ ".",
+                            "quit",
+                            "");
+        platform.outputMenu("",
+                            "",
+                            "");
     }
 }

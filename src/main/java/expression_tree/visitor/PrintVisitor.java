@@ -1,5 +1,6 @@
 package expression_tree.visitor;
 
+import expression_tree.Platform;
 import expression_tree.node.AddNode;
 import expression_tree.node.DivideNode;
 import expression_tree.node.LeafNode;
@@ -23,36 +24,36 @@ public class PrintVisitor implements Visitor {
 
     /** Visits a @a LeafNode and prints it contents. */
     public void visit(LeafNode node) {
-        //TODO: Platform.instance().addString(node.item() + " ");
+        Platform.instance().addString(node.item() + " ");
     }
 
 
     /** Visit a @a NegateNode and prints its contents. */
     public void visit(NegateNode node) {
-        //TODO: Platform.instance().addString("-");
+        Platform.instance().addString("-");
     }
 
 
     /** Visit a @a AddNode and prints its contents. */
     public void visit(AddNode node) {
-        //TODO: Platform.instance().addString("+ ");
+        Platform.instance().addString("+ ");
     }
 
 
     /** Visit a @a SubtractNode and prints its contents. */
     public void visit(SubtractNode node) {
-        //TODO: Platform.instance().addString("- ");
+        Platform.instance().addString("- ");
     }
 
 
     /** Visit a @a DivideNode and prints its contents. */
     public void visit(DivideNode node) {
-        //TODO: Platform.instance().addString("/ ");
+        Platform.instance().addString("/ ");
     }
 
 
     /** Visit a @a MultiplyNode and print its contents. */
     public void visit(MultiplyNode node) {
-        //TODO: Platform.instance().addString("* ");
+        Platform.instance().addString("* ");
     }
 }
