@@ -1,0 +1,36 @@
+@startuml
+
+note top of (Client)
+the visitor design pattern is a way of separating an algorithm from an object
+structure on which it operates. A practical result of this separation is the ability
+to add new operations to existing object structures without modifying those structures.
+end note
+
+Client --> Element
+Client --> Visitor
+
+class Element{
+  +accept(Visitor object)
+}
+
+class Visitor{
+  +visit(ConcreteElement object)
+}
+
+Element <|-- ConcreteElement
+Visitor <|-- ConcreteVisitor
+
+class ConcreteElement{
+  +accept(Visitor object)
+}
+
+class ConcreteVisitor{
+  +visit(ConcreteElement object)
+}
+
+
+note right of Client
+end note
+
+
+@enduml
