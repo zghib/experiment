@@ -1,0 +1,29 @@
+@startuml
+
+note top of (State)
+encapsulate varying behavior for the same object based on its internal state.
+This can be a cleaner way for an object to change its behavior at runtime without
+resorting to large monolithic conditional statements
+end note
+
+class State{
+  +handle()
+}
+
+note right of State
+end note
+
+
+
+class Context{
++request()
+}
+
+Context o-- State
+
+
+State <|-- ConcreteStateA
+State <|-- ConcreteStateB
+
+
+@enduml

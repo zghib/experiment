@@ -146,7 +146,7 @@ public class Interpreter {
      * build an expression tree out of the parse tree.  It's
      * implemented using the Template Method pattern.
      */
-    ExpressionTree interpret(String inputExpression) {
+    public ExpressionTree interpret(String inputExpression) {
         /** The parseTree is implemented as a Stack. */
         Stack<Symbol> parseTree = buildParseTree(inputExpression);
 
